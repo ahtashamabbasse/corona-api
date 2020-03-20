@@ -1,31 +1,33 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
+const moment = require('moment');
+const config = require('../constants/constants');
 
 const getTotalCases = async () => {
   let response;
   try {
-    response = await axios.get('https://www.worldometers.info/coronavirus/');
+    response = await axios.get(config.baseUrl);
     if (response.status !== 200) {
       console.error('ERROR : Website is down ');
     }
   } catch (e) {
-    console.log('ERROR');
+    console.log('ERROR ',e);
     return null;
   }
   const result = {};
 
   const html = cheerio.load(response.data);
-  html('.maincounter-number').filter((i, el) => {
-    let cases = el.children[0].next.children[0].data || 0;
-    if (i === 0) {
+  html('.maincounter-number').filter((index, element) => {
+    let cases = element.children[0].next.children[0].data || 0;
+    if (index === 0) {
       result.cases = cases;
-    } else if (i === 1) {
+    } else if (index === 1) {
       result.deaths = cases;
-    } else if (i === 2) {
+    } else if (index === 2) {
       result.recovered = cases;
     }
   });
-  result.updated = Date.now();
+  result.updated = moment().format('MMMM Do YYYY, h:mm:ss a');
   return result;
 
 };

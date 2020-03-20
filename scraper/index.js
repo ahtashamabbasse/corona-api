@@ -1,3 +1,3 @@
 module.exports = {
-  getTotalCases: require('./getTotalCases')
+  getTotalCases: require('./getTotalCases'),
 };
