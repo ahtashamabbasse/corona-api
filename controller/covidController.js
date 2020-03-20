@@ -9,9 +9,20 @@ class CovidController {
    * @description get total reported cases, death and recovered patients,
    */
   async getTotalCases (req, res) {
-    console.log('controller hitting');
     const getTotalCases = await scapper.getTotalCases();
     res.status(200).json(getTotalCases);
+  }
+
+  /**
+   * @route public /country
+   * @method GET
+   * @param req
+   * @param res
+   * @description get details of all countries
+   */
+  async getCountries(req, res) {
+    const getCountries = await scapper.getCountries();
+    res.status(200).json(getCountries);
   }
 }
 

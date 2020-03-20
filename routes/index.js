@@ -5,6 +5,7 @@ const CovidController = require('../controller/covidController');
 const covidController=new CovidController();
 
 router.get('/', covidController.getTotalCases);
+router.get('/countries', covidController.getCountries);
 
 
 module.exports = router;
