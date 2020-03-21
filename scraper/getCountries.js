@@ -7,7 +7,7 @@ const Helper=require('../Helper/stringManipulation')
 const getCountries = async () => {
   let response;
   try {
-    response = await axios.get(config.countryBaseUrl);
+    response = await axios.get(config.countryUrl);
     if (response.status !== 200) {
       console.error('ERROR : Website is down ');
     }
