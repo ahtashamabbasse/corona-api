@@ -2,7 +2,7 @@ const createError = require('http-errors');
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-// const scheduler = require('./scraper/scheduler');
+const scheduler = require('./scraper/scheduler');
 
 const indexRouter = require('./routes/index');
 
