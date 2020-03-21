@@ -41,7 +41,7 @@ class CovidController {
 
     let sortedCountries = [];
     if (columnName === 'country') {
-      sortedCountries = _.sortBy(countries, c => c.country);
+      sortedCountries = _(countries).orderBy('country', order);
     } else if (columnName === 'cases') {
       sortedCountries = _(countries).orderBy('cases', order);
     } else if (columnName === 'todayCases') {
