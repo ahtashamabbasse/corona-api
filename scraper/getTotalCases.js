@@ -6,7 +6,7 @@ const config = require('../constants/constants');
 const getTotalCases = async () => {
   let response;
   try {
-    response = await axios.get(config.baseUrl);
+    response = await axios.get(config.countryUrl);
     if (response.status !== 200) {
       console.error('ERROR : Website is down ');
     }
