@@ -28,7 +28,7 @@ class CovidController {
   }
 
   /**
-   * @route public /countries/sort/column
+   * @route public /countries/sort/column/order
    * @method GET
    * @param req
    * @param res
@@ -36,10 +36,10 @@ class CovidController {
    */
   async getSortedCountries (req, res) {
     const countries = db.get(constants.countryTable);
-    const columnName = req.params.column;
-    const order = req.params.order;
+    const columnName = req.params.column || 'deaths';
+    const order = req.params.order || 'desc';
 
-    let sortedCountries = [];
+    let sortedCountries = countries;
     if (columnName === 'country') {
       sortedCountries = _(countries).orderBy('country', order);
     } else if (columnName === 'cases') {
