@@ -1,3 +1,4 @@
 module.exports = {
-  baseUrl:'https://www.worldometers.info/coronavirus/'
+  countryUrl:'https://www.worldometers.info/coronavirus/',
+  statesUrl:'https://www.worldometers.info/coronavirus/country/us/',
 };

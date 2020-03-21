@@ -24,6 +24,19 @@ class CovidController {
     const getCountries = await scapper.getCountries();
     res.status(200).json(getCountries);
   }
+
+  /**
+   * @route public /states
+   * @method GET
+   * @param req
+   * @param res
+   * @description get details of USA states
+   */
+  async getStates(req, res) {
+    const states = await scapper.getStates();
+    res.status(200).json(states);
+  }
+
 }
 
 module.exports = CovidController;
