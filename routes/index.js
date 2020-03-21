@@ -6,6 +6,8 @@ const covidController=new CovidController();
 
 router.get('/', covidController.getTotalCases);
 router.get('/countries', covidController.getCountries);
+router.get('/countries/:country', covidController.getCountry);
+
 router.get('/states', covidController.getStates);
 
 

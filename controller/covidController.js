@@ -15,7 +15,7 @@ class CovidController {
   }
 
   /**
-   * @route public /country
+   * @route public /countries
    * @method GET
    * @param req
    * @param res
@@ -24,6 +24,21 @@ class CovidController {
   async getCountries (req, res) {
     const getCountries = db.get(constants.countryTable);
     res.status(200).json(getCountries);
+  }
+
+  /**
+   * @route public /countries/:country
+   * @method GET
+   * @param req
+   * @param res
+   * @description get details of individual country
+   */
+  async getCountry (req, res) {
+    const countries = db.get(constants.countryTable);
+    const paramCountry = req.params.country.toLowerCase();
+    const country = countries.filter(
+      c => c.country.toLocaleLowerCase() === paramCountry);
+    res.status(200).json(country);
   }
 
   /**

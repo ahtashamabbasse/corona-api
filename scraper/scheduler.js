@@ -4,8 +4,8 @@ const db = require('quick.db');
 
 const scheduleAll = async () => {
   console.log('Data scrapping ');
+  
   const totalCases = await scraper.getTotalCases();
-  console.log(totalCases);
   db.set(constants.totalCases, totalCases);
 
   const countries = await scraper.getCountries();
