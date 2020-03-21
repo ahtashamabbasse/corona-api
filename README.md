@@ -16,3 +16,25 @@ CoronaStats, is a real-time service that provides updated data from outlets worl
 |  http://api.coronacases.info/countries/sort/casesPerOneMillion/asc | Returns data sorted by the casesPerOneMillion |
 |  http://api.coronacases.info/countries/{country-name} | Returns data of a specific country |
 |  http://api.coronacases.info/states | Returns all United States of America and their Corona data |
+
+
+#Source:
+    https://www.worldometers.info/coronavirus/
+
+## Installation
+    gi clone https://github.com/ahtashamabbasse/Corona-virus-stats-api
+	npm install
+	npm start      
+	
+
+## Contributions
+
+* Spread the word
+* Open pull requests
+* Reach out with any feedback [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/ahtashamabbasse.svg?style=social&label=Follow%20%40ahtashamabbasse)](https://twitter.com/ahtashamabbasse)
+
+## License
+MIT © [Ahtasham Abbas](http://Ahtashamabbas.com)
+
+
+
