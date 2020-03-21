@@ -1,4 +1,4 @@
-# Corona-virus-stats-api
+# Corona Virus Stats Api
 CoronaStats, is a real-time service that provides updated data from outlets worldwide. The API  is a free to use service that offers four data options related to COVID-19: global stats, countr wise stats, sort data with different factor and US stats.
 # Endpoints
 |  GET Request  | Output  |
@@ -18,11 +18,11 @@ CoronaStats, is a real-time service that provides updated data from outlets worl
 |  http://api.coronacases.info/states | Returns all United States of America and their Corona data |
 
 
-#Source:
+# Source
     https://www.worldometers.info/coronavirus/
 
 ## Installation
-    gi clone https://github.com/ahtashamabbasse/Corona-virus-stats-api
+    git clone https://github.com/ahtashamabbasse/Corona-virus-stats-api
 	npm install
 	npm start      
 	
