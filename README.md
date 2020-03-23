@@ -1,6 +1,13 @@
 # Corona Virus Stats Api
 CoronaStats, is a real-time service that provides updated data from outlets worldwide. The API  is a free to use service that offers four data options related to COVID-19: global stats, country specific stats, US state stats and sorted data. http://api.coronacases.info/ 
 
+<ol>
+	<li>🚀 Get worldwide Coronavirus disease (COVID-19) reporting</li>
+	<li>🤯 Active daily reporting of your country's COVID-19 statistics</li>
+	<li> 🗃️ Data: Country, Cases, Deaths, Recovered, Active, Critical, Per Million</li>
+
+</ol>
+
 
 
 
@@ -22,7 +29,6 @@ CoronaStats, is a real-time service that provides updated data from outlets worl
 |  http://api.coronacases.info/states | Returns all United States of America and their Corona data |
 
 
-# Source
 ### Sources
 
 <ol>
