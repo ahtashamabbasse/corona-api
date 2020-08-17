@@ -39,26 +39,7 @@ class CovidController {
     const columnName = req.params.column || 'deaths';
     const order = req.params.order || 'desc';
 
-    let sortedCountries = countries;
-    if (columnName === 'country') {
-      sortedCountries = _(countries).orderBy('country', order);
-    } else if (columnName === 'cases') {
-      sortedCountries = _(countries).orderBy('cases', order);
-    } else if (columnName === 'todayCases') {
-      sortedCountries = _(countries).orderBy('todayCases', order);
-    } else if (columnName === 'deaths') {
-      sortedCountries = _(countries).orderBy('deaths', order);
-    } else if (columnName === 'todayDeaths') {
-      sortedCountries = _(countries).orderBy('todayDeaths', order);
-    } else if (columnName === 'recovered') {
-      sortedCountries = _(countries).orderBy('recovered', order);
-    } else if (columnName === 'active') {
-      sortedCountries = _(countries).orderBy('active', order);
-    } else if (columnName === 'critical') {
-      sortedCountries = _(countries).orderBy('critical', order);
-    } else if (columnName === 'casesPerOneMillion') {
-      sortedCountries = _(countries).orderBy('casesPerOneMillion', order);
-    }
+    let sortedCountries = _(countries).orderBy(columnName, order);
     res.status(200).json(sortedCountries);
   }
 
